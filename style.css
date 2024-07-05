@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 350px;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#pointer {
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+    width: 50px;
+    height: auto;
+    z-index: 2;
+}
+
+#centerImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: auto;
+    z-index: 1;
+}
+
+#spinButton {
+    margin-top: 20px;
+    width: 180px;
+    height: auto;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.logo {
+    position: absolute;
+    height: auto;
+    z-index: 3;
+}
+
+#logo {
+    bottom: 2%; /* Posición ajustada desde la parte inferior */
+    left: 2%; /* Posición ajustada desde la parte izquierda */
+    width: 35%; /* Tamaño inicial en porcentaje */
+    max-width: 350px; /* Tamaño máximo en píxeles */
+    min-width: 180px; /* Tamaño mínimo en píxeles */
+}
+
+#secondLogo {
+    top: 2%; /* Posición ajustada desde la parte superior */
+    left: 2%; /* Posición ajustada desde la parte izquierda */
+    width: 30%; /* Tamaño inicial en porcentaje */
+    max-width: 300px; /* Tamaño máximo en píxeles */
+    min-width: 150px; /* Tamaño mínimo en píxeles */
+}
+
+@media (min-width: 768px) {
+    /* Ajustes para pantallas más grandes */
+    #logo {
+        width: 25%; /* Ajusta el tamaño según sea necesario */
+        max-width: 400px; /* Ajusta el tamaño máximo según sea necesario */
+    }
+
+    #secondLogo {
+        width: 20%; /* Ajusta el tamaño según sea necesario */
+        max-width: 350px; /* Ajusta el tamaño máximo según sea necesario */
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Ajustes para pantallas aún más grandes */
+    #logo {
+        width: 20%; /* Ajusta el tamaño según sea necesario */
+        max-width: 450px; /* Ajusta el tamaño máximo según sea necesario */
+    }
+
+    #secondLogo {
+        width: 15%; /* Ajusta el tamaño según sea necesario */
+        max-width: 400px; /* Ajusta el tamaño máximo según sea necesario */
+    }
+}
